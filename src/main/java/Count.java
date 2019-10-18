@@ -43,6 +43,18 @@ public class Count extends HttpServlet {
                     "</body> </html>");
         }
     }
+    //(inside doget)
+    //int count = 0;
+//    count++
+    //res.setContentType("text/html")
+//      PrintWriter out = res.getWriter();
+    //out.println("<h1> you have visted this page " + count + " times<h1>");
+
+//    String reset = req.getParameter("reset")
+//
+////    if(reset != null){
+////        count = 0;
+////    }
 
 
 }

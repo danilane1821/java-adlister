@@ -12,7 +12,7 @@ public class HelloWorldServlet extends HttpServlet {
         String name = req.getParameter("name");
         res.setContentType("text/html");
             PrintWriter out = res.getWriter();
-            if(name == null){
+            if(name == null || name.isEmpty()){
                 out.println("<h1>Hello world !" + "</h1>");
             }else{
                 out.println("<h1>Hello " + name + "!</h1>");
