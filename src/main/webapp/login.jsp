@@ -29,10 +29,9 @@
     <c:if test="${param.userName.equalsIgnoreCase('admin') && param.password.equalsIgnoreCase('password')}">
         <% response.sendRedirect("/profile.jsp");%>
     </c:if>
-<%--    <c:otherwise>--%>
-
-<%--    </c:otherwise>--%>
 
 </form>
+<jsp:include page="partials/test.jsp" />
 </body>
+
 </html>
