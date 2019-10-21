@@ -17,8 +17,12 @@
 <html>
 <head>
     <title>Login</title>
+
 </head>
 <body>
+<%@ include file="partials/header.html" %>
+
+
 <form action="/login.jsp" method="post">
     <label for="userName">Username:</label>
     <input type="text" id="userName" name="userName"><br>
@@ -31,7 +35,7 @@
     </c:if>
 
 </form>
-<jsp:include page="partials/test.jsp" />
+<%@ include file="partials/footer.html" %>
 </body>
 
 </html>

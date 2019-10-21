@@ -9,9 +9,6 @@
 <%@ include file="partials/navbar.html" %>
 <%@ include file="partials/header.html" %>
 <%@ include file="partials/footer.html" %>
-<%@ include file="css/style.css" %>
-
-
 
 <html>
 <head>
