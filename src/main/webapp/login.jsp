@@ -17,11 +17,11 @@
 <html>
 <head>
     <title>Login</title>
-
+    <%@ include file="partials/header.html" %>
 </head>
 <body>
-<%@ include file="partials/header.html" %>
 
+<%@ include file="partials/navbar.html" %>
 
 <form action="/login.jsp" method="post">
     <label for="userName">Username:</label>
@@ -29,6 +29,10 @@
     <label for="password">Password:</label>
     <input type="text" id="password" name="password"><br>
     <button>Submit</button>
+
+<%--    this if statment is not an appropriate way to use the jstl tags <C:if, --%>
+<%--    use them only when deciding what HTML to display not for java logic--%>
+<%--    use <% if logic here... %> instead--%>
 
     <c:if test="${param.userName.equalsIgnoreCase('admin') && param.password.equalsIgnoreCase('password')}">
         <% response.sendRedirect("/profile.jsp");%>
