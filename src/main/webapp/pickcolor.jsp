@@ -7,13 +7,14 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%--<% String color = request.getParameter("color"); %>--%>
+<% String color = request.getParameter("color"); %>
 <html>
 <head>
     <title>Pick a color..any color!</title>
 </head>
 <body>
 
+<%--you can use type color as well instead of text--%>
 
 <form action="/backgroundcolor.jsp" method="post">
     <label for="color">Enter your favorite color</label>
