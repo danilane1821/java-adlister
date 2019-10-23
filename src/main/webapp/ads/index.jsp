@@ -16,7 +16,7 @@
 <body>
 <h1> Here are some ads</h1>
 
-<c:forEach var="ad" items="${ads}">
+<c:forEach items="${ads}" var="ad">
     <div class="ad">
         <h1>Title: ${ad.title}</h1>
         <h2>User: ${ad.userId}</h2>
