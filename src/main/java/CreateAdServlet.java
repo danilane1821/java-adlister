@@ -20,5 +20,8 @@ public class CreateAdServlet extends HttpServlet {
         );
         DaoFactory.getAdsDao().insert(ad);
         response.sendRedirect("/ads");
+
+        //or Long id = DaoFactory.getAdsDao().insert(ad);
+        //response.sendRedirect("/ads + id"); --> this way we can see the add after we create it
     }
 }

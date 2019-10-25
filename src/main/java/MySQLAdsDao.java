@@ -10,10 +10,10 @@ import java.util.List;
 public class MySQLAdsDao implements Ads {
     private Connection connection;
 
-    public MySQLAdsDao() {
+    public MySQLAdsDao(Config config) {
         try {
 
-            Config config = new Config();
+
             DriverManager.registerDriver(new Driver());
             connection = DriverManager.getConnection(
                     config.getUrl(),
@@ -57,6 +57,8 @@ public class MySQLAdsDao implements Ads {
             String sql = String.format("insert into ads(title, description) values('%s','%s')",ad.getTitle(),ad.getDescription());
             stmt.executeLargeUpdate(sql,Statement.RETURN_GENERATED_KEYS);
             ResultSet rs = stmt.getGeneratedKeys();
+            rs.next();
+            return rs.getLong(1);
         } catch (SQLException e) {
             e.printStackTrace();
         }
