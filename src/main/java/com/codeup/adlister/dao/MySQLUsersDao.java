@@ -23,7 +23,7 @@ public class MySQLUsersDao implements Users {
 
 
     @Override
-    public User findByUsername(String username) throws SQLException {
+    public User findByUsername(String username) {
         User registeredUser = null;
         String query = "SELECT * FROM Users WHERE username = ?";
         try {
